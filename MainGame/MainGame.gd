@@ -10,7 +10,6 @@ extends Control
 func _ready():
 	pass # Replace with function body.
 
+func _on_Start_Game_Button_pressed():
+	get_tree().change_scene("res://MainGame/MainGame.tscn")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
