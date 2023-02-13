@@ -7,21 +7,21 @@
 size = 55
 font_data = ExtResource( 2 )
 
-[sub_resource type="CanvasItemMaterial" id=5]
+[sub_resource type="CanvasItemMaterial" id=2]
 
-[sub_resource type="Theme" id=6]
+[sub_resource type="Theme" id=3]
 
-[sub_resource type="ImageTexture" id=7]
+[sub_resource type="ImageTexture" id=4]
 
-[sub_resource type="ParticlesMaterial" id=2]
+[sub_resource type="ParticlesMaterial" id=5]
 
-[sub_resource type="Shader" id=3]
+[sub_resource type="Shader" id=6]
 
-[sub_resource type="ShaderMaterial" id=4]
+[sub_resource type="ShaderMaterial" id=7]
 resource_local_to_scene = true
 render_priority = 4
-next_pass = SubResource( 2 )
-shader = SubResource( 3 )
+next_pass = SubResource( 5 )
+shader = SubResource( 6 )
 
 [node name="MenuMenu" type="Control"]
 anchor_right = 1.0
@@ -64,14 +64,14 @@ size_flags_vertical = 3
 [node name="Screenshot" type="TextureRect" parent="Layout/Main"]
 modulate = Color( 0.909804, 0.6, 0.972549, 1 )
 light_mask = 49665
-material = SubResource( 5 )
+material = SubResource( 2 )
 use_parent_material = true
 margin_bottom = 618.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_pivot_offset = Vector2( 170, 300 )
-theme = SubResource( 6 )
-texture = SubResource( 7 )
+theme = SubResource( 3 )
+texture = SubResource( 4 )
 stretch_mode = 4
 
 [node name="Buttons" type="VBoxContainer" parent="Layout/Main"]
@@ -82,7 +82,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Start Game Button" type="Button" parent="Layout/Main/Buttons"]
-material = SubResource( 4 )
+material = SubResource( 7 )
 margin_right = 1276.0
 margin_bottom = 203.0
 size_flags_horizontal = 3
