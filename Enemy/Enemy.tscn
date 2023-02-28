@@ -7,7 +7,7 @@
 extents = Vector2( 44.75, 64.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 35, 85.5 )
+extents = Vector2( 1.5, 11.5 )
 
 [node name="Enemy" type="KinematicBody2D"]
 position = Vector2( 0.911194, -1.91614 )
@@ -25,5 +25,5 @@ texture = ExtResource( 1 )
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -2.91119, 6.41614 )
+position = Vector2( 44.5888, -50.5839 )
 shape = SubResource( 2 )

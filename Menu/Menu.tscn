@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Menu/Start Game Button.gd" type="Script" id=1]
 [ext_resource path="res://Menu/AlienDot.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Images/bakgrund.jpg" type="Texture" id=3]
 [ext_resource path="res://Images/alien.png" type="Texture" id=4]
+[ext_resource path="res://Images/person fallin down.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=7]
 size = 125
@@ -44,6 +45,16 @@ size = 68
 outline_size = 20
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
+
+[sub_resource type="CanvasItemMaterial" id=12]
+
+[sub_resource type="Shader" id=13]
+
+[sub_resource type="ShaderMaterial" id=14]
+resource_local_to_scene = true
+render_priority = 1
+next_pass = SubResource( 12 )
+shader = SubResource( 13 )
 
 [node name="MenuMenu" type="Control"]
 anchor_right = 1.0
@@ -148,5 +159,14 @@ scale = Vector2( 2.74428, 5.20833 )
 z_index = -2
 texture = ExtResource( 3 )
 offset = Vector2( -293.428, -203.973 )
+
+[node name="Person" type="Sprite" parent="."]
+material = SubResource( 14 )
+use_parent_material = true
+position = Vector2( 151, 111 )
+rotation = -0.364774
+scale = Vector2( 0.28103, 0.235728 )
+z_index = -2
+texture = ExtResource( 5 )
 
 [connection signal="pressed" from="Layout/Main/Buttons/Start Game Button" to="Layout/Main/Buttons/Start Game Button" method="_on_Start_Game_Button_pressed"]
