@@ -1,10 +1,12 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Menu/Start Game Button.gd" type="Script" id=1]
 [ext_resource path="res://Menu/AlienDot.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Images/bakgrund.jpg" type="Texture" id=3]
 [ext_resource path="res://Images/alien.png" type="Texture" id=4]
 [ext_resource path="res://Images/person fallin down.png" type="Texture" id=5]
+[ext_resource path="res://Menu/Options.gd" type="Script" id=6]
+[ext_resource path="res://Menu/Quit.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=7]
 size = 125
@@ -129,6 +131,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 9 )
 text = "O p t i o n s"
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -142,6 +145,7 @@ size_flags_vertical = 3
 custom_fonts/font = SubResource( 10 )
 text = "Q u i t"
 clip_text = true
+script = ExtResource( 7 )
 
 [node name="Credits" type="HBoxContainer" parent="Layout"]
 margin_top = 706.0
@@ -170,3 +174,5 @@ z_index = -2
 texture = ExtResource( 5 )
 
 [connection signal="pressed" from="Layout/Main/Buttons/Start Game Button" to="Layout/Main/Buttons/Start Game Button" method="_on_Start_Game_Button_pressed"]
+[connection signal="pressed" from="Layout/Main/Buttons/Options" to="Layout/Main/Buttons/Options" method="_on_Options_pressed"]
+[connection signal="pressed" from="Layout/Main/Buttons/Quit" to="Layout/Main/Buttons/Start Game Button" method="_on_Quit_pressed"]
