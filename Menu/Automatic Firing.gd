@@ -6,5 +6,5 @@ func _ready():
 
 
 func on_automaticFiring_pressed():
-	GlobalVariables.automaticFiring = pressed
 	print(pressed)
+	GlobalVariables.automaticFiring = pressed
