@@ -63,6 +63,8 @@ text = "0"
 
 [node name="Border_Left" type="Area2D" parent="." groups=["left"]]
 position = Vector2( -1.53629, 369.479 )
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
 position = Vector2( -5.37704, -0.768158 )
@@ -70,6 +72,8 @@ shape = SubResource( 1 )
 
 [node name="Border_Right" type="Area2D" parent="." groups=["right"]]
 position = Vector2( 1287.42, 368.711 )
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right"]
 position = Vector2( -5.37704, -0.768158 )
@@ -84,6 +88,8 @@ position = Vector2( 642.94, 669.056 )
 
 [node name="Border_Top" type="KinematicBody2D" parent="." groups=["top"]]
 position = Vector2( 646.934, -31.955 )
+collision_layer = 3
+collision_mask = 3
 
 [node name="TopCollider" type="CollisionShape2D" parent="Border_Top" groups=["top"]]
 position = Vector2( 0, 1 )
@@ -91,6 +97,8 @@ shape = SubResource( 5 )
 
 [node name="Border_Bottom" type="KinematicBody2D" parent="." groups=["bottom"]]
 position = Vector2( 646.934, 748.484 )
+collision_layer = 3
+collision_mask = 3
 
 [node name="TopCollider" type="CollisionShape2D" parent="Border_Bottom" groups=["top"]]
 position = Vector2( 0, 1 )

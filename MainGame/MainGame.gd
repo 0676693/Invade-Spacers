@@ -4,6 +4,7 @@ export (int) var countdownMax
 var currentTimer 
 
 func _ready():
+	set_process(true)
 	currentTimer = countdownMax
 	$HUD/Countdown.text = str(currentTimer)
 	
@@ -14,8 +15,9 @@ func _ready():
 		currentTimer = currentTimer - 1
 		print(currentTimer)
 	print("Game Over, noob")
-	get_tree().change_scene("res://Menu/Menu.tscn")
-	
+	get_tree().change_scene("res://Menu/Loss.tscn")
+
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
-
+	if get_tree().get_nodes_in_group("enemy").size() == 0:
+		get_tree().change_scene("res://Menu/WinScene.tscn")
