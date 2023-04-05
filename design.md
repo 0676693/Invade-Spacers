@@ -33,10 +33,11 @@ gantt
     title Project Plan
 dateFormat DD-MM-YY
 axisFormat %d-%B
-tickInterval 1week
+tickInterval 2week
 
 section Holidays
 Holidays: 09-04-23, 22-04-23
+Holidays: 02-07-23, 15-07-23
 
 section Coding
 Powerups: 23-04-23, 14-05-23
@@ -46,4 +47,9 @@ Big Boss: 12-05-23, 06-06-23
 section Design
 Project Overview:05-04-23, id
 Project Plan: 05-04-23, 06-06-23
+
+
+section Schoolwork
+Assessment 3 Due: 06-06-23, 07-06-23
+TESTS: 15-06-23, 23-06-23
 ```
