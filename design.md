@@ -24,7 +24,16 @@ The big boss will be a gigantic alien that shoots out sporadic patterns of mini-
 
 
 # Behaviour - User Journey
+```mermaid
+journey
+    title User Journey
 
+section User Journey Example
+    One: 8.4: Example
+    Two: 8.4: Example
+    Three: 8.4: Example
+
+```
 
 # Planning Diagram - Project Plan
 
@@ -36,7 +45,6 @@ axisFormat %d-%B
 tickInterval 2week
 
 section Holidays
-Holidays: 09-04-23, 22-04-23
 Holidays: 02-07-23, 15-07-23
 
 section Coding
@@ -45,9 +53,8 @@ Multiple Levels: 30-04-23, 03-06-23
 Big Boss: 12-05-23, 06-06-23
 
 section Design
-Project Overview:05-04-23, id
-Project Plan: 05-04-23, 06-05-23
-
+Project Overview:23-04-23, id
+Project Plan: 18-04-23, 06-05-23
 
 section Schoolwork
 Assessment 3 Due: 06-06-23, 07-06-23
