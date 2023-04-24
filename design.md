@@ -46,7 +46,7 @@ Big Boss: 12-05-23, 06-06-23
 
 section Design
 Project Overview:05-04-23, id
-Project Plan: 05-04-23, 06-06-23
+Project Plan: 05-04-23, 06-05-23
 
 
 section Schoolwork
