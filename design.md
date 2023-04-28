@@ -52,6 +52,7 @@ section Holidays
 Holidays: 02-07-23, 15-07-23
 Reconciliation Day: 29-05-23, 1d
 King's Birthday: 12-06-23, 1d
+D&D: 06-05-23, 1d
 
 section Coding
 Powerups: 01-05-23, 19-05-23
@@ -63,6 +64,7 @@ section Design
 Project Overview:23-04-23, id
 Project Plan: 18-04-23, 06-05-23
 Design.md: 06-04-23, 06-05-23
+GANT Chart: 05-04-23, 04-05-23
 
 section Schoolwork
 Math Quiz: 11-05-23, 1d
@@ -73,4 +75,5 @@ English Reflection Task: 08-06-23, 2d
 Q2 Classes End: 16-06-23, 03-07-23
 Q3 Classes Start: 15-07-23, 15-07-23
 TESTS: 15-06-23, 23-06-23
+WEX: 26-06-23, 01-07-23
 ```
