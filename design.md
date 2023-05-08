@@ -30,12 +30,13 @@ journey
 
 section Main Menu
     Press Start: 3: Main Menu
+    Toggle Options: 3: Main Menu
 section Gameplay
     Start Playing: 3.5: Gameplay
     Clear Levels: 4.6: Gameplay
 section End
     Win: 7.4: Gameplay
-    Lose: 3: Gameplay
+    Lose: 3.1: Gameplay
 
 ```
 
@@ -64,10 +65,10 @@ section Design
 Project Overview:23-04-23, id
 Project Plan: 18-04-23, 06-05-23
 Design.md: 06-04-23, 06-05-23
-GANT Chart: 05-04-23, 04-05-23
+GANT Chart: 05-04-23, 08-05-23
 
 section Schoolwork
-Math Quiz: 11-05-23, 1d
+Math Quiz: 08-05-23, 1d
 English Creative Task: 22-05-23, 26-05-23
 Success Assembly: 06-06-23, 1d
 Assessment 3 Due: 07-06-23, 08-06-23

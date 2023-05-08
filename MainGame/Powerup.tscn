@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://MainGame/Powerup.gd" type="Script" id=1]
+[ext_resource path="res://Images/Kachow Powerup.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 96.4139
+
+[node name="Powerup" type="Area2D"]
+position = Vector2( -364.378, -669.928 )
+rotation = 0.427211
+scale = Vector2( 3.65248, 4.1614 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 200, 90 )
+scale = Vector2( 0.35, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 175.074, 93.7269 )
+shape = SubResource( 1 )
