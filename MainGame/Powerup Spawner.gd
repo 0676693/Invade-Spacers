@@ -2,6 +2,7 @@ extends Node2D
 
 const Powerup = preload("res://MainGame/Powerup.tscn")
 onready var timer_started = false
+
 func _ready():
 	pass 
 	
