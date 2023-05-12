@@ -15,13 +15,17 @@ script = ExtResource( 1 )
 velocity = Vector2( 0, 200 )
 spriteSize = 200
 
+[node name="SpaceInvaders" parent="." instance=ExtResource( 3 )]
+margin_left = 199.731
+margin_top = 90.3696
+margin_right = 1479.73
+margin_bottom = 810.37
+
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 200, 90 )
+position = Vector2( 300, 190 )
 scale = Vector2( 0.35, 0.3 )
 texture = ExtResource( 2 )
 
-[node name="SpaceInvaders" parent="Sprite" instance=ExtResource( 3 )]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 175.074, 93.7269 )
+position = Vector2( 272.527, 192.877 )
 shape = SubResource( 1 )
