@@ -14,3 +14,6 @@ func _process(delta):
 		
 func _on_powerup_body_entered(body: KinematicBody2D):
 	queue_free()
+
+
+

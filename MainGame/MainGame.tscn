@@ -11,16 +11,16 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9622, 380.576 )
 
-[sub_resource type="ShaderMaterial" id=2]
+[sub_resource type="ShaderMaterial" id=6]
 
-[sub_resource type="Shader" id=3]
+[sub_resource type="Shader" id=7]
 
 [sub_resource type="ShaderMaterial" id=4]
 resource_local_to_scene = true
 resource_name = "Shader thingy"
 render_priority = 127
-next_pass = SubResource( 2 )
-shader = SubResource( 3 )
+next_pass = SubResource( 6 )
+shader = SubResource( 7 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 662.058, 10 )

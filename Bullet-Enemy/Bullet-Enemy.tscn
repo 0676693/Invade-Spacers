@@ -6,7 +6,7 @@
 [sub_resource type="CanvasItemMaterial" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 23.5, 29.5 )
+extents = Vector2( 19, 25 )
 
 [node name="Bullet" type="KinematicBody2D"]
 position = Vector2( 193.956, 142.277 )
@@ -22,5 +22,5 @@ scale = Vector2( 0.150553, 0.156217 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 12.544, -19.777 )
+position = Vector2( 12.044, -17.277 )
 shape = SubResource( 1 )

@@ -20,4 +20,4 @@ func _ready():
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 	if get_tree().get_nodes_in_group("enemy").size() == 0:
-		get_tree().change_scene("res://Menu/WinScene.tscn")
+		get_tree().change_scene("res://Menu/Level 2.tscn")
