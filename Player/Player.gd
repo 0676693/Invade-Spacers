@@ -2,10 +2,14 @@ extends KinematicBody2D
 
 var movement_speed = 400 
 var bulletSource = preload("res://Bullet/Bullet.tscn")
+var timer = Timer.new()
 
 func _ready():
 	set_process(true)
 	set_physics_process(true)
+	timer.set_wait_time(5)
+	timer.set_one_shot(true)
+	self.add_child(timer)
 
 func _process(delta):
 	if GlobalVariables.automaticFiring:
@@ -14,7 +18,14 @@ func _process(delta):
 				var bulletInstance = bulletSource.instance()
 				bulletInstance.position = Vector2(position.x, position.y-20)
 				get_tree().get_root().add_child(bulletInstance)
-				yield()
+				yield()	
+	if Input.is_action_pressed("shrink"):
+		self.scale = Vector2(0.3, 0.3)
+		GlobalVariables.playerSize = scale
+		timer.start()
+		yield(timer, "timeout")
+		self.scale = Vector2(1,1)
+		GlobalVariables.playerSize = scale
 
 	elif Input.is_action_just_pressed("fire"):
 		if GlobalVariables.bulletInstanceCount < 3:
@@ -35,3 +46,10 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_down"):
 		move_and_collide(Vector2(0, movement_speed * delta))
 
+
+
+
+
+func _on_ScaleTimer_timeout():
+	self.scale = Vector2(1,1)
+	pass # Replace with function body.

@@ -20,8 +20,8 @@ In order to make the powerups different every time, there will be a random one s
 ### Multiple levels
 There will hopefully be a variety of levels, getting increasingly more and more difficult as the player gets used to the game mechanics. This will culminate in a battle with the big boss.
 
-### Big Boss
-The big boss will be a gigantic alien that shoots out sporadic patterns of mini-bullets, instead of predictable larger ones. During this fight, a standard enemy will be on either side of the big boss, shooting at the sides to discourage the player from avoiding the attacks by hiding on the sides of the screen.
+### Shrinking Mechanic
+I think a mechanic where the player can temporarily shrink themselves (more importantly, their collision shape) in order to avoid enemy attacks. The caveat to this will be that their bulelts shrink with them, making it harder to hit enemies in this state. This mechanic will have to have some sort of cooldown, forcing the players to be tactical with their useage.
 
 # Behaviour - User Journey
 ```mermaid
@@ -58,7 +58,7 @@ D&D: 06-05-23, 1d
 section Coding
 Powerups: 01-05-23, 19-05-23
 Multiple Levels: 02-05-23, 03-06-23
-Big Boss: 12-05-23, 06-06-23
+Shrinking Mechanics: 12-05-23, 06-06-23
 Programming Logic: 01-05-23, 30d
 
 section Design

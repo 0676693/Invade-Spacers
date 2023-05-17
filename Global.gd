@@ -11,4 +11,4 @@ var scoringInformation = {
 }
 
 var automaticFiring = false
-
+var playerSize = Vector2(1,1)

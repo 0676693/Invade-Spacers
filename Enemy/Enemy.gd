@@ -13,6 +13,12 @@ func _colliding(area):
 	if area.is_in_group("left"):
 		get_parent().global_position.y += 10
 		get_parent().speed = get_parent().speed * -1
+		if area.is_in_group("Border Right 2"):
+			get_parent().global_position.y += 10
+			get_parent().speed = get_parent().speed * -1
+	if area.is_in_group("Border Left 2"):
+		get_parent().global_position.y += 10
+		get_parent().speed = get_parent().speed * -1
 
 func _process(delta):
 	#while (true):
