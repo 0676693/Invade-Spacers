@@ -22,3 +22,7 @@ func _physics_process(delta):
 			queue_free()
 			GlobalVariables.bulletInstanceCount -= 1
 	
+func _colliding(area):
+		if area.is_in_group("top"):
+			queue_free()
+

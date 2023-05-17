@@ -63,16 +63,16 @@ margin_right = 139.0
 margin_bottom = 27.0
 text = "0"
 
-[node name="2Border-Left" type="Area2D" parent="."]
+[node name="2Border-Left" type="Area2D" parent="." groups=["left"]]
 position = Vector2( 12, 363 )
 
-[node name="Border Left 2" type="CollisionShape2D" parent="2Border-Left"]
+[node name="Border Left" type="CollisionShape2D" parent="2Border-Left"]
 shape = SubResource( 4 )
 
-[node name="2Border-Right" type="Area2D" parent="."]
+[node name="2Border-Right" type="Area2D" parent="." groups=["right"]]
 position = Vector2( 12, 363 )
 
-[node name="Border Right 2" type="CollisionShape2D" parent="2Border-Right"]
+[node name="Border Right" type="CollisionShape2D" parent="2Border-Right"]
 position = Vector2( 1268, 3 )
 shape = SubResource( 5 )
 
@@ -83,17 +83,17 @@ material = SubResource( 8 )
 use_parent_material = true
 position = Vector2( 642.94, 669.056 )
 
-[node name="2Border-Top" type="Area2D" parent="."]
+[node name="2Border-Top" type="Area2D" parent="." groups=["top"]]
 position = Vector2( 12, 363 )
 
-[node name="Border Top 2" type="CollisionShape2D" parent="2Border-Top"]
+[node name="Border Top" type="CollisionShape2D" parent="2Border-Top"]
 position = Vector2( 632, -369.5 )
 shape = SubResource( 6 )
 
-[node name="2Border-Bottom" type="Area2D" parent="."]
+[node name="2Border-Bottom" type="Area2D" parent="." groups=["bottom"]]
 position = Vector2( 12, 363 )
 
-[node name="Border Bottom 2" type="CollisionShape2D" parent="2Border-Bottom"]
+[node name="Border Bottom" type="CollisionShape2D" parent="2Border-Bottom"]
 position = Vector2( 630.5, 362 )
 shape = SubResource( 7 )
 
