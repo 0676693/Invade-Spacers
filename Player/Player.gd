@@ -3,6 +3,7 @@ extends KinematicBody2D
 var movement_speed = 400 
 var bulletSource = preload("res://Bullet/Bullet.tscn")
 var timer = Timer.new()
+var Health = 3
 
 func _ready():
 	set_process(true)
@@ -46,8 +47,10 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_down"):
 		move_and_collide(Vector2(0, movement_speed * delta))
 
-
-
+func reduceHealth():
+	Health -= 1
+	if Health == 0:
+		get_tree().change_scene("res://Menu/Loss.tscn")
 
 
 func _on_ScaleTimer_timeout():
