@@ -6,7 +6,8 @@ var speed = 1250
 func _ready():
 	GlobalVariables.enemyBulletInstanceCount += 1
 	set_physics_process(true)
-
+	if GlobalVariables.Player == null:
+		queue_free()
 
 
 func _physics_process(delta):

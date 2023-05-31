@@ -8,7 +8,10 @@ func _ready():
 	GlobalVariables.bulletInstanceCount += 1
 	set_physics_process(true)
 
+
+
 func _physics_process(delta):
+
 	if GlobalVariables.playerSize == Vector2(0.3, 0.3):
 		self.scale = Vector2(0.3, 0.3)
 	elif GlobalVariables.playerSize == Vector2(1, 1):
@@ -21,6 +24,8 @@ func _physics_process(delta):
 				GlobalVariables.scoringInformation["currentScore"] +=10
 			queue_free()
 			GlobalVariables.bulletInstanceCount -= 1
+	if GlobalVariables.Player == null:
+		queue_free()
 	
 func _colliding(area):
 		if area.is_in_group("top"):

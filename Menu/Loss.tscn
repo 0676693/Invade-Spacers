@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://BacktoMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menu/Screenshot_20230329_102236.png" type="Texture" id=2]
@@ -9,6 +9,12 @@
 next_pass = SubResource( 1 )
 
 [sub_resource type="Theme" id=3]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 662.058, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 662.058, 10 )
 
 [node name="Loss" type="Node2D"]
 
@@ -36,5 +42,23 @@ position = Vector2( 639, 367 )
 scale = Vector2( 0.697917, 0.712037 )
 z_index = -6
 texture = ExtResource( 2 )
+
+[node name="Border_Top" type="KinematicBody2D" parent="." groups=["top"]]
+position = Vector2( 646.934, -31.955 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="TopCollider" type="CollisionShape2D" parent="Border_Top" groups=["top"]]
+position = Vector2( 0, 1 )
+shape = SubResource( 4 )
+
+[node name="Border_Bottom" type="KinematicBody2D" parent="." groups=["bottom"]]
+position = Vector2( 646.934, 748.484 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="TopCollider" type="CollisionShape2D" parent="Border_Bottom" groups=["top"]]
+position = Vector2( 0, 1 )
+shape = SubResource( 5 )
 
 [connection signal="pressed" from="Layout/BacktoMenu" to="Layout/BacktoMenu" method="_on_BacktoMenu_pressed"]

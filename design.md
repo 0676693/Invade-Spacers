@@ -13,15 +13,17 @@ The enemy sprite (left) and the player sprite (right).
 The additional gameplay that is being included is a big boss enemy, multiple levels and some powerups. It is my hope that this creates a varied and interesting experience for the player, making no two run-throughs of the game the same.
 
 ### Powerups
-Different powerups include the likes of which include faster fire rate, faster player movement, slower enemy movement and Soul Swap, which clears all the enemies currently on screen and restores defeated enemies, making alive enemies die and dead enimies alive. 
+Different powerups include the likes of which include faster fire rate, faster player movement, slower enemy movement and Soul Swap, which clears all the enemies currently on screen and restores defeated enemies, making alive enemies die and dead enemies alive. 
 
-In order to make the powerups different every time, there will be a random one spawning every 30 seconds at a random location that the player must get to if they want to obtain it. Hopefully, this will mix up the gameplay from just shooting enemies.
+
 
 ### Multiple levels
 There will hopefully be a variety of levels, getting increasingly more and more difficult as the player gets used to the game mechanics. This will culminate in a battle with the big boss.
 
 ### Shrinking Mechanic
-I think a mechanic where the player can temporarily shrink themselves (more importantly, their collision shape) in order to avoid enemy attacks. The caveat to this will be that their bulelts shrink with them, making it harder to hit enemies in this state. This mechanic will have to have some sort of cooldown, forcing the players to be tactical with their useage.
+I think a mechanic where the player can temporarily shrink themselves (more importantly, their collision shape) in order to avoid enemy attacks. The caveat to this will be that their bulelts shrink with them, making it harder to hit enemies in this state. This mechanic will have to have some sort of cooldown, forcing the players to be tactical with their usage.
+
+Additionally, if they die while shrunk, their bullets will remain small when they respawn until they can shrink again and survive until they grow again.
 
 # Behaviour - User Journey
 ```mermaid

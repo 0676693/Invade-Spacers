@@ -11,6 +11,7 @@ func _ready():
 	timer.set_wait_time(5)
 	timer.set_one_shot(true)
 	self.add_child(timer)
+	GlobalVariables.Player = self
 
 func _process(delta):
 	if GlobalVariables.automaticFiring:
@@ -50,6 +51,7 @@ func _physics_process(delta):
 func reduceHealth():
 	Health -= 1
 	if Health == 0:
+		GlobalVariables.Player = null
 		get_tree().change_scene("res://Menu/Loss.tscn")
 
 

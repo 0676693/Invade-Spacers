@@ -3,8 +3,9 @@
 [ext_resource path="res://Menu/Screenshot_20230329_101212.png" type="Texture" id=1]
 
 [node name="WinScene" type="Node2D"]
+position = Vector2( 0, 10 )
 
 [node name="Screenshot20230329101212" type="Sprite" parent="."]
-position = Vector2( 624, 343 )
+position = Vector2( 624, 328 )
 scale = Vector2( 0.729167, 0.743519 )
 texture = ExtResource( 1 )
