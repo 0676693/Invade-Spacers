@@ -26,8 +26,10 @@ func _physics_process(delta):
 			GlobalVariables.bulletInstanceCount -= 1
 	if GlobalVariables.Player == null:
 		queue_free()
-	
-func _colliding(area):
-		if area.is_in_group("top"):
-			queue_free()
+	if position.x > 10:
+		queue_free()
+	if position.x < 1280:
+		queue_free()
+
+
 
