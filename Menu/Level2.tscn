@@ -1,0 +1,212 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://ExampleCode.gd" type="Script" id=1]
+[ext_resource path="res://Enemy/Enemies.gd" type="Script" id=2]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=4]
+[ext_resource path="res://Images/galaxy.png" type="Texture" id=5]
+[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 22, 386 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 25.5, 382 )
+
+[sub_resource type="ShaderMaterial" id=2]
+
+[sub_resource type="Shader" id=3]
+
+[sub_resource type="ShaderMaterial" id=8]
+resource_local_to_scene = true
+resource_name = "Shader thingy"
+render_priority = 127
+next_pass = SubResource( 2 )
+shader = SubResource( 3 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 654, 16.5 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 616.5, 20 )
+
+[node name="Level2" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 570, -284 )
+
+[node name="HUD" type="HBoxContainer" parent="."]
+margin_right = 139.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+
+[node name="Countdown" type="Label" parent="HUD"]
+margin_top = 13.0
+margin_right = 37.0
+margin_bottom = 27.0
+text = "Timer"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentScoreLabel" type="Label" parent="HUD"]
+margin_left = 41.0
+margin_top = 13.0
+margin_right = 127.0
+margin_bottom = 27.0
+text = "Current Score"
+
+[node name="CurrentScore" type="Label" parent="HUD"]
+margin_left = 131.0
+margin_top = 13.0
+margin_right = 139.0
+margin_bottom = 27.0
+text = "0"
+
+[node name="2Border-Left" type="Area2D" parent="." groups=["left"]]
+position = Vector2( 12, 363 )
+
+[node name="Border Left" type="CollisionShape2D" parent="2Border-Left"]
+shape = SubResource( 4 )
+
+[node name="2Border-Right" type="Area2D" parent="." groups=["right"]]
+position = Vector2( 12, 363 )
+
+[node name="Border Right" type="CollisionShape2D" parent="2Border-Right"]
+position = Vector2( 1268, 3 )
+shape = SubResource( 5 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+modulate = Color( 1, 0.427451, 0.882353, 1 )
+self_modulate = Color( 0.180392, 0.109804, 0.27451, 1 )
+material = SubResource( 8 )
+use_parent_material = true
+position = Vector2( 642.94, 669.056 )
+
+[node name="2Border-Top" type="Area2D" parent="." groups=["top"]]
+position = Vector2( 12, 363 )
+collision_layer = 7
+
+[node name="Border Top" type="CollisionShape2D" parent="2Border-Top" groups=["top"]]
+position = Vector2( 632, -369.5 )
+shape = SubResource( 6 )
+
+[node name="2Border-Bottom" type="Area2D" parent="." groups=["bottom"]]
+position = Vector2( 12, 363 )
+collision_layer = 7
+collision_mask = 7
+
+[node name="Border Bottom" type="CollisionShape2D" parent="2Border-Bottom"]
+position = Vector2( 630.5, 362 )
+shape = SubResource( 7 )
+
+[node name="Enemies" type="Node2D" parent="."]
+position = Vector2( 705.16, 3.84076 )
+script = ExtResource( 2 )
+
+[node name="Enemy" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( 226.241, 73.6566 )
+
+[node name="Enemy2" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( 332.707, 74.3564 )
+
+[node name="Enemy3" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( 7.31857, 74.4248 )
+
+[node name="Enemy4" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( 116.089, 74.3564 )
+
+[node name="Enemy5" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -206.995, 74.4248 )
+
+[node name="Enemy6" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -98.2243, 74.3564 )
+
+[node name="Enemy7" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -423.612, 74.4248 )
+
+[node name="Enemy8" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -314.842, 74.3564 )
+
+[node name="Enemy9" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( 71.168, 183.27 )
+
+[node name="Enemy10" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( 177.634, 183.97 )
+
+[node name="Enemy11" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -147.754, 184.038 )
+
+[node name="Enemy12" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -38.984, 183.97 )
+
+[node name="Enemy13" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -362.067, 184.038 )
+
+[node name="Enemy14" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -253.297, 183.97 )
+
+[node name="Enemy15" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -578.685, 184.038 )
+
+[node name="Enemy16" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -469.915, 183.97 )
+
+[node name="Enemy17" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( 223.936, 294.115 )
+
+[node name="Enemy18" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( 330.402, 294.815 )
+
+[node name="Enemy19" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( 5.01413, 294.883 )
+
+[node name="Enemy20" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( 113.785, 294.815 )
+
+[node name="Enemy21" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -209.299, 294.883 )
+
+[node name="Enemy22" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -100.529, 294.815 )
+
+[node name="Enemy23" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -425.917, 294.883 )
+
+[node name="Enemy24" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -317.146, 294.815 )
+
+[node name="Enemy25" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( 68.864, 403.728 )
+
+[node name="Enemy26" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( 175.33, 404.428 )
+
+[node name="Enemy27" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -150.058, 404.497 )
+
+[node name="Enemy28" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -41.288, 404.428 )
+
+[node name="Enemy29" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -364.372, 404.497 )
+
+[node name="Enemy30" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -255.601, 404.428 )
+
+[node name="Enemy31" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -579.789, 404.497 )
+
+[node name="Enemy32" parent="Enemies" groups=["enemy2"] instance=ExtResource( 6 )]
+position = Vector2( -472.219, 404.428 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+
+[node name="Sprite" type="Sprite" parent="."]
+show_behind_parent = true
+light_mask = 512
+position = Vector2( 650.5, 363.25 )
+scale = Vector2( 5.28862, 3.56829 )
+texture = ExtResource( 5 )

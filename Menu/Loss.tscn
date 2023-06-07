@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://BacktoMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menu/Screenshot_20230329_102236.png" type="Texture" id=2]
+[ext_resource path="res://Menu/Retry.gd" type="Script" id=3]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -29,11 +30,19 @@ margin_bottom = 579.0
 theme = SubResource( 3 )
 alignment = 1
 
+[node name="Retry" type="Button" parent="Layout"]
+modulate = Color( 1, 0.772549, 0.772549, 1 )
+margin_top = 4.0
+margin_right = 491.0
+margin_bottom = 24.0
+text = "Retry"
+script = ExtResource( 3 )
+
 [node name="BacktoMenu" type="Button" parent="Layout"]
 modulate = Color( 1, 0.772549, 0.772549, 1 )
-margin_top = 16.0
+margin_top = 28.0
 margin_right = 491.0
-margin_bottom = 36.0
+margin_bottom = 48.0
 text = "Return to Main Menu"
 script = ExtResource( 1 )
 
@@ -61,4 +70,5 @@ collision_mask = 3
 position = Vector2( 0, 1 )
 shape = SubResource( 5 )
 
+[connection signal="pressed" from="Layout/Retry" to="Layout/Retry" method="_on_Retry_pressed"]
 [connection signal="pressed" from="Layout/BacktoMenu" to="Layout/BacktoMenu" method="_on_BacktoMenu_pressed"]

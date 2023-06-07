@@ -13,3 +13,5 @@ var scoringInformation = {
 var automaticFiring = false
 var playerSize = Vector2(1,1)
 var Player
+var EnemiesSpeed = -100
+var Level2 = "res://Menu/Level2.tscn"
