@@ -18,10 +18,10 @@ There will hopefully be a variety of levels, getting increasingly more and more 
 
 ### Dash Mechanic
 I feel like a mechanic which lets a player dash could be a very interesting way to avoid enemy attacks. It'll have a pay-off, forcing the players to rush headfirst to another place on the screen, possibly into another enemy bullet.
+It'll also be super quick, making it a 
 
 ### Shrinking Mechanic
-I think a mechanic where the player can temporarily shrink themselves (more importantly, their collision shape) in order to avoid enemy attacks could work well. The caveat to this will be that their bullets shrink with them, making it harder to hit enemies in this state. This mechanic will have to have some sort of cooldown, forcing the players to be tactical with their usage.
-
+I think a mechanic where the player can temporarily shrink themselves (more importantly, their collision shape) in order to avoid enemy attacks could work well. The caveat to this will be that their bullets shrink with them, making it harder to hit enemies in this state. 
 Additionally, if they die while shrunk, their bullets will remain small when they respawn until they can shrink again and survive until they grow again.
 This mechanic is inspired by Cuphead.
 

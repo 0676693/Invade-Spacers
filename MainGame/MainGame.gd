@@ -9,7 +9,7 @@ func _ready():
 	currentTimer = countdownMax
 	$HUD/Countdown.text = str(currentTimer)
 	
-		
+	#Player death changing the scene to the loss screen.
 	while currentTimer > 0:
 		yield(get_tree().create_timer(1,0), "timeout")
 		$HUD/Countdown.text = str(currentTimer)
