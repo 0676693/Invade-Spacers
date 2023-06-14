@@ -19,6 +19,7 @@ func _ready():
 	print("Game Over, noob")
 	get_tree().change_scene("res://Menu/Loss.tscn")
 	
+#If all enemies cleared in Level 1, switch scene to Level 2
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 	if get_tree().get_nodes_in_group("enemy").size() == 0:

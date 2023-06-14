@@ -8,7 +8,7 @@ func _ready():
 	set_process(true)
 
 
-
+#Enemies move to left and right of screen, bouncing off the sides and lowering themselves.
 func _colliding(area):
 	if area.is_in_group("right"):
 		get_parent().global_position.y += 10
@@ -19,10 +19,12 @@ func _colliding(area):
 	
 
 func _process(delta):
+	
 	#while (true):
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var my_random_number = rng.randf_range(2.0, 30.0)
+	
 	#print("time: "my_random_number")
 	yield(get_tree().create_timer(my_random_number), "timeout")
 	if GlobalVariables.Player == null:

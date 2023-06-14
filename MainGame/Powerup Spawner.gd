@@ -1,5 +1,7 @@
 extends Node2D
 
+#This code for a powerup spawner hasn't been used, but it is kept in the game in case I wanted to use it in the future.
+
 const Powerup = preload("res://MainGame/Powerup.tscn")
 onready var timer_started = false
 

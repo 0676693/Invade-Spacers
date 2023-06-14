@@ -85,7 +85,8 @@ position = Vector2( 642.94, 669.056 )
 
 [node name="2Border-Top" type="Area2D" parent="." groups=["top"]]
 position = Vector2( 12, 363 )
-collision_layer = 7
+collision_layer = 15
+collision_mask = 15
 
 [node name="Border Top" type="CollisionShape2D" parent="2Border-Top" groups=["top"]]
 position = Vector2( 632, -369.5 )
@@ -93,8 +94,8 @@ shape = SubResource( 6 )
 
 [node name="2Border-Bottom" type="Area2D" parent="." groups=["bottom"]]
 position = Vector2( 12, 363 )
-collision_layer = 7
-collision_mask = 7
+collision_layer = 15
+collision_mask = 15
 
 [node name="Border Bottom" type="CollisionShape2D" parent="2Border-Bottom"]
 position = Vector2( 630.5, 362 )

@@ -16,7 +16,7 @@ func _ready():
 	self.add_child(shrinktimer)
 	self.add_child(dashtimer)
 	GlobalVariables.Player = self
-
+#Firing Mechanic. If Spacebar/Left click pressed, player must create and fire a bullet instance.
 func _process(delta):
 	if GlobalVariables.automaticFiring:
 		if Input.is_action_pressed("fire"):
@@ -34,13 +34,13 @@ func _process(delta):
 		yield(shrinktimer, "timeout")
 		self.scale = Vector2(1,1)
 		GlobalVariables.playerSize = scale
-		
+		#Dashing mechanic, If V/middle mouse  button pressed, increase speed by 500 for duration of the timer.
 	elif Input.is_action_pressed("dash"):
 		movement_speed = 900
 		dashtimer.start()
 		yield(dashtimer, "timeout")
 		movement_speed = 400
-			
+		#setting maximum bullet nstance to 3
 	elif Input.is_action_just_pressed("fire"):
 		if GlobalVariables.bulletInstanceCount < 3:
 			var bulletInstance = bulletSource.instance()

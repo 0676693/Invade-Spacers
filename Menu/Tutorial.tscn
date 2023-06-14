@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Images/actualcontrolsthistimeforrealisiessss.png" type="Texture" id=1]
+[ext_resource path="res://Images/100000000000000000tutorialo.png" type="Texture" id=1]
 [ext_resource path="res://Menu/Tutorial.gd" type="Script" id=2]
 
 [node name="Tutorial" type="Control"]

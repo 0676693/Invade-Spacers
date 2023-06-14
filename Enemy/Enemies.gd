@@ -1,9 +1,11 @@
 extends Node2D
 
 var speed = -100
+var collidedObject
 
 func _ready():
 	set_physics_process(true)
+	set_process(true)
 	
 
 func _physics_process(delta):

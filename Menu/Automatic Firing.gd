@@ -8,3 +8,10 @@ func _ready():
 func on_automaticFiring_pressed():
 	print(pressed)
 	GlobalVariables.automaticFiring = pressed
+
+
+
+func _process(delta):
+	if GlobalVariables.automaticFiring:
+		get_parent().get_property_list().find(pressed)
+		pressed = true
